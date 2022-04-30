@@ -3,7 +3,7 @@ import Right from './components/Right'
 import { GiSaveArrow, GiCancel } from "react-icons/gi";
 import "./App.css" 
 import ControlContextProvider from "./contexts/ControlContext";
-
+import Filter from "./components/Filter";
 function App() {
   return (
     <ControlContextProvider>
@@ -30,24 +30,7 @@ function App() {
                 </div>
               </div>
             </li>
-            <li className="filter">
-              <div>
-                <input type="radio" id="all" name="filter" />
-                <label for="all">Hepsi</label>
-              </div>
-              <div>
-                <input type="radio" id="area" name="filter" />
-                <label for="area">Alan</label>
-              </div>
-              <div>
-                <input type="radio" id="type" name="filter" />
-                <label for="all">Tip</label>
-              </div>
-              <div>
-                <input type="radio" id="a-z" name="filter" />
-                <label for="a-z">a-z</label>
-              </div>
-            </li>
+            <Filter  />
           </div>
           <Left />
         </div>

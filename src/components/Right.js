@@ -1,5 +1,5 @@
 
-import { useContext, useEffect,useState} from "react";
+import { useContext, useEffect} from "react";
 import { ControlContext } from "../contexts/ControlContext";
 import ControlRight from "./ControlRight";
 import DelayTime from "./DelayTime";
