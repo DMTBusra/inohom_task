@@ -1,21 +1,19 @@
-import React from 'react'
+import React, { useState, useSyncExternalStore } from "react";
 
-const Control1 = ({control,handleAdd}) => {
-  
- const handleChoice = (e) => {
-   
-   
-   if ( e.target.className==="zero" ) {
-     e.target.style.background = "rgb(83, 177, 177)";
-    e.target.parentElement.firstChild.style.background="none"
-    }
-    else if (e.target.className === "one") {
-      e.target.style.background = "rgb(83, 177, 177)";
-      e.target.parentElement.lastChild.style.background = "none";
-    }
-   
- 
- };
+const Control1 = ({ control, handleAdd }) => {
+  const [buttonActive, setButtonActive] = useState("");
+
+  const handleChoice = (e) => {
+    setButtonActive(e.target.id);
+    //  if ( e.target.className==="zero" ) {
+    //    e.target.style.background = "rgb(83, 177, 177)";
+    //   e.target.parentElement.firstChild.style.background="none"
+    //   }
+    //   else if (e.target.className === "one") {
+    //     e.target.style.background = "rgb(83, 177, 177)";
+    //     e.target.parentElement.lastChild.style.background = "none";
+    //   }
+  };
 
   return (
     <div>
@@ -23,22 +21,33 @@ const Control1 = ({control,handleAdd}) => {
         <div className="name">{control.name}</div>
         <div className="icon">{control.icon}</div>
         <div className="control">
-          <button className="one" value="1"onClick={handleChoice}>
+          <button
+            id="one"
+            className={buttonActive === "one" ? "one active" : "one"}
+            value="1"
+            onClick={handleChoice}
+          >
             I
           </button>
-          <button className="zero" value="0" onClick={handleChoice}>
+          <button
+            id="zero"
+            className={buttonActive === "zero" ? "zero active" : "zero"}
+            value="0"
+            onClick={handleChoice}
+          >
             0
           </button>
         </div>
-        
-          <button className="add" onClick={() => handleAdd(control.id)}>
-            EKLE
-          </button>
-        
+
+        <button
+          className="add"
+          onClick={() => handleAdd(control.id, buttonActive)}
+        >
+          EKLE
+        </button>
       </li>
-      
     </div>
   );
-}
+};
 
-export default Control1
+export default Control1;

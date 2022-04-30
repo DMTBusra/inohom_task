@@ -12,11 +12,10 @@ const Left = () => {
  const [data, setData] = useState(initialdata)
  
 console.log(data);
-const handleAdd = (addedControlId) => {
-    const add=(data.filter((control)=>control.id === addedControlId))[0]
-    
-    setRightScreen([...rightScreen,add]);
-  };
+const handleAdd = (addedControlId, buttonActive) => {
+  const add = data.filter((control) => control.id === addedControlId)[0];
+  setRightScreen([...rightScreen, { ...add, buttonActive }]);
+};
 
 
 
