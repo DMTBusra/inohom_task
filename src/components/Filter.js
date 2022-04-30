@@ -1,33 +1,28 @@
 import React from 'react'
 
 import { data } from "../components/data";
-const Filter = ({}) => {
+const Filter = ({setData}) => {
 
- const handleClick=(e)=>{
-
-        if(e.target.value==="a-z"){
-           
-
-            const sortedData=data.sort((a,b)=>{
-                    if (a.name.toUpperCase() < b.name.toUpperCase()) {
-                      return -1;
-                    }
-                    if (a.name.toUpperCase() > b.name.toUpperCase()) {
-                      return 1;
-                    }
-                    return 0;
-            });
-         
-            console.log(sortedData);
-           }
-             
-           
-      
-        
-        else if (e.target.value==="Hepsi"){}
-        else if (e.target.value==="Alan"){}
-        else if (e.target.value==="Tip"){}
- }
+const handleClick = (e) => {
+  if (e.target.value === "a-z") {
+    let sortedData = [...data];
+    sortedData.sort((a, b) => {
+      if (a.name.toUpperCase() < b.name.toUpperCase()) {
+        return -1;
+      }
+      if (a.name.toUpperCase() > b.name.toUpperCase()) {
+        return 1;
+      }
+      return 0;
+    });
+    setData(sortedData);
+    console.log(sortedData);
+  } else if (e.target.value === "Hepsi") {
+    setData(data)
+  } else if (e.target.value === "Alan") {
+  } else if (e.target.value === "Tip") {
+  }
+};
   return (
     <div>
       <li className="filter">

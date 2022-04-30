@@ -3,7 +3,7 @@ import Right from './components/Right'
 import { GiSaveArrow, GiCancel } from "react-icons/gi";
 import "./App.css" 
 import ControlContextProvider from "./contexts/ControlContext";
-import Filter from "./components/Filter";
+
 function App() {
   return (
     <ControlContextProvider>
@@ -30,7 +30,7 @@ function App() {
                 </div>
               </div>
             </li>
-            <Filter  />
+            
           </div>
           <Left />
         </div>
