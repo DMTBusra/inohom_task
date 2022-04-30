@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    
+    background-image: linear-gradient(to right,rgb(16, 16, 53), purple);
+    
+}
+
+.control_1,.control_2,.control_right,.delay_time_screen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     list-style-type: none; 
+    margin:5px;
+    height: 10vh;
+    
+    background-color: rgba(36, 33, 33, 0.5);
+  
+}
+.cancel_save{
+    display: flex;
+    justify-content: space-between;
+  
+   width:15%;
+    margin-left: 20%;
+    text-align: center;
+   
+}
+
+.scenario{
+   
+    border-radius: 5px;
+    width:50%;
+    height:5vh;
+    padding-top: 5px;
+    text-align: center;
+    background-color: rgba(20, 20, 20, 0.5);
+}
+.text{
+    font-size: 12px;
+}
+.header{
+    background-color: rgba(36, 33, 33, 0.5);
+    height:20vh;
+}
+.delay_time_screen{
+    height: 7vh;
+    color: rgb(83, 177, 177);
+}
+
+
+.plus-minus{
+    display:flex;
+    align-items: center;
+}
+
+.degree{
+    color: greenyellow;
+    font-size:20px;
+    margin: 5px;
+}
+
+.name{
+    color: aqua;
+    font-size: 13px;
+    margin-left: 5px;
+ 
+    width:15%;
+}
+.left,.right{
+   
+    width: 50%;
+    margin:10px;
+}
+.cancel{
+    background-color:red;
+    border-radius: 50%;
+    
+    width:130%;
+    height:5vh
+   
+  
+}
+.save{
+    background-color:greenyellow;
+    border-radius: 50%;
+    width:100%;
+    height:5vh
+}
+
+.add{
+    background-color: rgba(20, 20, 20, 0.5);
+     height:100%;
+     color: white;
+     width:13%;
+     border:none
+    
+}
+
+.zero,.one,.plus,.minus {
+    color: white;
+     background-color: rgba(27, 25, 25, 0.5);
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    margin: 5px;
+     font-size: 12px;
+    
+  
+}
+.reduce_ten,.reduce_one,.raise_ten,.raise_one{
+     color: black;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+   font-size: 12px;
+   
+}
+.positive{
+    margin-right: 5px;
+}
+.icon{
+    color: white;
+    width: 15%;
+    font-size:200%;
+   
+    
+}
+.title{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+     padding-top: 10px;
+    
+    
+
+}
+.filter{
+    font-size: 12px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    
+}
+
+    
+.arrowup,.arrowdown,.garbage{
+    display: flex;
+    font-size: 30px;
+     padding:10px;
+     height:100%;
+   background-color: rgba(20, 20, 20, 0.5);
+    align-items: center;
+     color: white;
+   
+     margin-right: 5px;
+}
+.garbage{
+    margin: 0;
+}
+
+.icons{display: flex;
+    justify-content: space-around;
+    height:100%;
+
+}
